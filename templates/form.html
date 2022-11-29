@@ -1,0 +1,26 @@
+<html>
+    <h1>Welcome to the Cointracker.io Hotbit Preprocessor</h1>
+   <body>
+       <h4>This open-source tool was built to work around limitations with cointracker's Hotbit integration. To fix your Hotbit tax reporting and portfolio monitoring, follow the instructions below:</h4>
+        <br></br>
+        1. Download your complete order history from hotbit.io. Go to Orders > Spot Order > Order (not Order History!) > Export to generate a csv. Rename it to "orders.csv"
+       <br></br>
+        2. In a text editor, create a new file called "deposits.txt". In hotbit, navigate to Wallet > Transaction History > Deposits History. For each page, highlight and copy the data from this table and paste it into your file. Paste content from subsequent pages on a new line below the end of the previous page's data. The table column names should be copied from the first page but no subsequent pages. When finished, your file should look like a single long column of data, a single value per row, with the table header names occupying the first 7 rows. 
+       <br></br>Repeat this process with the Withdrawals History (withdrawals.txt) and System Deposits (system_deposits.txt) pages if they contain any data. Double check that all csv names are correct.
+        <br></br>
+       3. Use the form below to upload your .csv and any .txt files that you made. Select multiple files in the popup dialogue with cmd/ctrl + click.
+        <br></br>
+        <form action = "https://cointracker-csv-preprocessor.bradyab.repl.co/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="my_file[]" multiple>
+            <input type="submit" value="Upload">
+       </form>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+        Use at your own risk. This product is not affiliated with Cointracker.io. You can view the code for this project <a href="https://replit.com/@bradyab/tokenbuddy?v=1">here</a>
+
+       <br></br>
+       Feedback: bla4xa@virginia.edu
+   </body>
+</html>
